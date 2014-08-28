@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+a {
+    color: #2a6496;
+}
+
+.col-md-4:hover {
+    background-color: #ffffff;
+}
+
+a:hover .col-md-4 {
+    text-decoration: none;
+}
+
+a:hover .col-md-4 h2 {
+    text-decoration: underline;
+}
+
+a .col-md-4.bg-primary {
+    color: #ffffff;
+}
+
+a .col-md-4.bg-primary:hover {
+    color: #2a6496;
+}
+
+.addthis_horizontal_follow_toolbox {
+    padding-bottom: 10px;
+}
+
+.navbar-header a.active{
+    color: #ffffff;
+    background-image: linear-gradient(to bottom,#222 0,#282828 100%);
+    background-repeat: repeat-x;
+    box-shadow: inset 0 3px 9px rgba(0,0,0,.25);
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(../img/berna_bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.jumbotron .container {
+    background-color: rgba(238, 238, 238, 0.75);
+}
