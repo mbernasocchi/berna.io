@@ -46,3 +46,7 @@ a .col-md-4.bg-primary:hover {
 .jumbotron .container {
     background-color: rgba(238, 238, 238, 0.75);
 }
+
+#description{
+   padding-top: 3em;
+}
