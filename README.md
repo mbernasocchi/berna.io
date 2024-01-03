@@ -1,4 +1,4 @@
-io.berna.io
-===========
+berna.io
+========
 
 github pages repo
