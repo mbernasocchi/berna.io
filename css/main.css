@@ -199,7 +199,7 @@ h3 {
 .hero-intro {
     max-width: 520px;
     margin-bottom: 1.65rem;
-    color: color-mix(in srgb, var(--color-light) 88%, transparent);
+    color: var(--color-light);
     font-size: clamp(1rem, 1.8vw, 1.22rem);
     line-height: 1.65;
 }
@@ -215,7 +215,7 @@ h3 {
     padding: 0.4rem 0.68rem;
     border: 1px solid color-mix(in srgb, var(--color-light) 36%, transparent);
     border-radius: 2px;
-    color: color-mix(in srgb, var(--color-light) 90%, transparent);
+    color: var(--color-light);
     font-size: 0.72rem;
 }
 
@@ -321,7 +321,7 @@ h2 em {
     margin-top: 0.75rem;
     align-items: center;
     gap: 0.8rem;
-    color: var(--color-dark);
+    color: var(--color-accent2);
     font-size: 0.8rem;
     font-weight: 700;
     text-decoration-color: var(--color-gold);
@@ -454,21 +454,21 @@ h2 em {
 }
 
 .project-featured p {
-    color: color-mix(in srgb, var(--color-light) 74%, transparent);
+    color: var(--color-light);
 }
 
 .card-link {
     margin-top: auto;
+    color: var(--color-accent2);
     font-size: 0.75rem;
     font-weight: 700;
 }
 
 .card-link span {
     margin-left: 0.4rem;
-    color: var(--color-accent2);
 }
 
-.project-featured .card-link span {
+.project-featured .card-link {
     color: var(--color-soft);
 }
 
@@ -683,6 +683,22 @@ h2 em {
 
 .mountain-copy > p {
     color: var(--color-dark);
+}
+
+.photo-break {
+    height: clamp(22rem, 45vw, 40rem);
+    margin: 0;
+    overflow: hidden;
+    background: var(--color-dark);
+}
+
+.photo-break img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 43%;
+    filter: grayscale(1);
 }
 
 .bio {
