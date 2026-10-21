@@ -475,6 +475,58 @@ h2 em {
     color: var(--gold);
 }
 
+.leading {
+    padding-top: clamp(5rem, 9vw, 8rem);
+    padding-bottom: clamp(5rem, 9vw, 8rem);
+}
+
+.leading-copy {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 3rem;
+}
+
+.leading-copy > p {
+    margin-bottom: 1.5rem;
+    color: var(--granite-soft);
+}
+
+.leading-facts {
+    display: grid;
+    margin-top: 1rem;
+    border-top: 1px solid var(--line);
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.fact-item {
+    display: flex;
+    min-height: 145px;
+    padding: 1.2rem 1rem 0 0;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.fact-item + .fact-item {
+    padding-left: 1.25rem;
+    border-left: 1px solid var(--line);
+}
+
+.fact-item strong {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 600;
+    letter-spacing: -0.06em;
+    line-height: 1;
+}
+
+.fact-item span {
+    max-width: 220px;
+    color: var(--granite-soft);
+    font-size: 0.76rem;
+    line-height: 1.55;
+}
+
 .talks {
     background: var(--granite);
     color: var(--paper);
@@ -526,6 +578,13 @@ h2 em {
     margin-bottom: 0.35rem;
     font-size: 1.3rem;
     font-weight: 500;
+}
+
+.talk-item h3 a {
+    color: inherit;
+    text-decoration-color: var(--gold);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
 }
 
 .talk-item p {
@@ -800,6 +859,24 @@ h2 em {
         align-items: flex-start;
         flex-direction: column;
         gap: 1.2rem;
+    }
+
+    .leading-copy {
+        grid-template-columns: 1fr;
+    }
+
+    .leading-facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .fact-item:nth-child(3) {
+        padding-left: 0;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+    }
+
+    .fact-item:nth-child(4) {
+        border-top: 1px solid var(--line);
     }
 
     .talk-item {
