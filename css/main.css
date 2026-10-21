@@ -1,13 +1,10 @@
 :root {
     color-scheme: light;
-    --granite: #2e3a3f;
-    --granite-soft: #526166;
-    --snow: #f7f5f0;
-    --paper: #fffefa;
-    --gold: #d9a441;
-    --alpenglow: #e07a5f;
-    --glacier: #cfe3e8;
-    --line: rgba(46, 58, 63, 0.16);
+    --color-dark: #1F3A4D;
+    --color-light: #F7F5F0;
+    --color-gold: #D9A441;
+    --color-accent2: #2F6F8F;
+    --color-soft: #9CC5D4;
     --serif: "Bricolage Grotesque", sans-serif;
     --sans: "Inter", sans-serif;
 }
@@ -23,8 +20,8 @@ html {
 
 body {
     margin: 0;
-    background: var(--snow);
-    color: var(--granite);
+    background: var(--color-light);
+    color: var(--color-dark);
     font-family: var(--sans);
     font-size: 16px;
     line-height: 1.7;
@@ -36,7 +33,7 @@ a {
 }
 
 a:focus-visible {
-    outline: 3px solid var(--alpenglow);
+    outline: 3px solid var(--color-accent2);
     outline-offset: 4px;
 }
 
@@ -47,8 +44,8 @@ a:focus-visible {
     left: 0.75rem;
     padding: 0.7rem 1rem;
     transform: translateY(-150%);
-    background: var(--paper);
-    color: var(--granite);
+    background: #fff;
+    color: var(--color-dark);
 }
 
 .skip-link:focus {
@@ -61,7 +58,7 @@ a:focus-visible {
     top: 0;
     right: 0;
     left: 0;
-    color: var(--paper);
+    color: #fff;
 }
 
 .nav-wrap {
@@ -71,7 +68,7 @@ a:focus-visible {
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 254, 250, 0.24);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
 }
 
 .wordmark,
@@ -85,7 +82,7 @@ a:focus-visible {
 
 .wordmark span,
 .footer-wordmark span {
-    color: var(--gold);
+    color: var(--color-gold);
 }
 
 .nav-links {
@@ -114,13 +111,13 @@ a:focus-visible {
 
 .nav-contact {
     padding: 0.62rem 0.92rem;
-    border: 1px solid rgba(255, 254, 250, 0.58);
+    border: 1px solid rgba(255, 255, 255, 0.58);
     border-radius: 2px;
 }
 
 .nav-contact span {
     margin-left: 0.45rem;
-    color: var(--gold);
+    color: var(--color-light);
 }
 
 .hero {
@@ -131,8 +128,8 @@ a:focus-visible {
     padding: 9rem max(1.5rem, calc((100vw - 1180px) / 2)) 5rem;
     align-items: center;
     overflow: hidden;
-    background: var(--granite);
-    color: var(--paper);
+    background: var(--color-dark);
+    color: var(--color-light);
 }
 
 .hero-photo,
@@ -149,7 +146,7 @@ a:focus-visible {
 }
 
 .hero-shade {
-    background: linear-gradient(90deg, rgba(23, 34, 38, 0.88) 0%, rgba(23, 34, 38, 0.65) 46%, rgba(23, 34, 38, 0.12) 100%), linear-gradient(0deg, rgba(23, 34, 38, 0.4), transparent 60%);
+    background: linear-gradient(90deg, color-mix(in srgb, var(--color-dark) 88%, transparent) 0%, color-mix(in srgb, var(--color-dark) 65%, transparent) 46%, color-mix(in srgb, var(--color-dark) 12%, transparent) 100%), linear-gradient(0deg, color-mix(in srgb, var(--color-dark) 40%, transparent), transparent 60%);
 }
 
 .hero-content {
@@ -171,7 +168,7 @@ a:focus-visible {
 
 .eyebrow {
     margin: 0 0 1.25rem;
-    color: var(--gold);
+    color: var(--color-soft);
 }
 
 h1,
@@ -196,13 +193,13 @@ h3 {
 }
 
 .hero h1 span {
-    color: var(--gold);
+    color: var(--color-gold);
 }
 
 .hero-intro {
     max-width: 520px;
     margin-bottom: 1.65rem;
-    color: rgba(255, 254, 250, 0.88);
+    color: color-mix(in srgb, var(--color-light) 88%, transparent);
     font-size: clamp(1rem, 1.8vw, 1.22rem);
     line-height: 1.65;
 }
@@ -216,9 +213,9 @@ h3 {
 
 .hero-roles span {
     padding: 0.4rem 0.68rem;
-    border: 1px solid rgba(255, 254, 250, 0.36);
+    border: 1px solid color-mix(in srgb, var(--color-light) 36%, transparent);
     border-radius: 2px;
-    color: rgba(255, 254, 250, 0.9);
+    color: color-mix(in srgb, var(--color-light) 90%, transparent);
     font-size: 0.72rem;
 }
 
@@ -242,21 +239,21 @@ h3 {
 }
 
 .button-gold {
-    background: var(--gold);
-    color: var(--granite);
+    background: var(--color-gold);
+    color: var(--color-dark);
 }
 
 .button-gold:hover {
-    background: #e4b553;
+    background: color-mix(in srgb, var(--color-gold) 90%, white);
 }
 
 .button-outline {
-    border-color: rgba(255, 254, 250, 0.5);
-    color: var(--paper);
+    border-color: color-mix(in srgb, var(--color-light) 50%, transparent);
+    color: var(--color-light);
 }
 
 .button-outline:hover {
-    background: rgba(255, 254, 250, 0.08);
+    background: color-mix(in srgb, var(--color-light) 8%, transparent);
 }
 
 .hero-note {
@@ -264,7 +261,7 @@ h3 {
     right: max(1.5rem, calc((100vw - 1280px) / 2));
     bottom: 1.25rem;
     margin: 0;
-    color: rgba(255, 254, 250, 0.78);
+    color: color-mix(in srgb, var(--color-light) 78%, transparent);
     font-family: var(--serif);
     font-size: 1rem;
     font-style: italic;
@@ -284,12 +281,12 @@ h3 {
 }
 
 .section-kicker {
-    color: var(--granite-soft);
+    color: var(--color-accent2);
 }
 
 .section-kicker span {
     margin-right: 0.7rem;
-    color: var(--alpenglow);
+    color: var(--color-accent2);
 }
 
 .intro h2,
@@ -305,7 +302,7 @@ h3 {
 }
 
 h2 em {
-    color: var(--alpenglow);
+    color: var(--color-gold);
     font-style: normal;
 }
 
@@ -316,7 +313,7 @@ h2 em {
 }
 
 .intro-copy > p:not(.intro-lede) {
-    color: var(--granite-soft);
+    color: var(--color-dark);
 }
 
 .text-link {
@@ -324,23 +321,23 @@ h2 em {
     margin-top: 0.75rem;
     align-items: center;
     gap: 0.8rem;
-    color: var(--granite);
+    color: var(--color-dark);
     font-size: 0.8rem;
     font-weight: 700;
-    text-decoration-color: var(--gold);
+    text-decoration-color: var(--color-gold);
     text-decoration-thickness: 2px;
     text-underline-offset: 5px;
 }
 
 .text-link span {
-    color: var(--alpenglow);
+    color: var(--color-accent2);
 }
 
 .numbers {
     position: relative;
     overflow: hidden;
-    background-color: var(--glacier);
-    background-image: repeating-radial-gradient(ellipse at 5% 120%, transparent 0 22px, rgba(46, 58, 63, 0.09) 23px 24px, transparent 25px 44px);
+    background-color: var(--color-soft);
+    background-image: repeating-radial-gradient(ellipse at 5% 120%, transparent 0 22px, color-mix(in srgb, var(--color-dark) 9%, transparent) 23px 24px, transparent 25px 44px);
 }
 
 .numbers-wrap {
@@ -369,7 +366,7 @@ h2 em {
 
 .number-item span {
     max-width: 150px;
-    color: var(--granite-soft);
+    color: var(--color-dark);
     font-size: 0.72rem;
 }
 
@@ -397,15 +394,15 @@ h2 em {
 .section-heading > p {
     max-width: 330px;
     margin: 0 0 0.3rem;
-    color: var(--granite-soft);
+    color: var(--color-dark);
 }
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1px;
-    border: 1px solid var(--line);
-    background: var(--line);
+    border: 1px solid color-mix(in srgb, var(--color-dark) 16%, transparent);
+    background: color-mix(in srgb, var(--color-dark) 16%, transparent);
 }
 
 .project-card {
@@ -414,33 +411,33 @@ h2 em {
     padding: clamp(1.5rem, 4vw, 2.5rem);
     flex-direction: column;
     align-items: flex-start;
-    background: var(--paper);
-    color: var(--granite);
+    background: #fff;
+    color: var(--color-dark);
     text-decoration: none;
     transition: background-color 160ms ease;
 }
 
 .project-card:hover {
-    background: #f0eee8;
+    background: color-mix(in srgb, var(--color-light) 96%, var(--color-dark));
 }
 
 .project-featured {
-    background: var(--granite);
-    color: var(--paper);
+    background: var(--color-dark);
+    color: var(--color-light);
 }
 
 .project-featured:hover {
-    background: #3b4a50;
+    background: color-mix(in srgb, var(--color-dark) 92%, var(--color-light));
 }
 
 .card-index {
     margin-bottom: 1.4rem;
-    color: var(--alpenglow);
+    color: var(--color-accent2);
     font-size: 0.62rem;
 }
 
 .project-featured .card-index {
-    color: var(--gold);
+    color: var(--color-soft);
 }
 
 .project-card h3 {
@@ -452,12 +449,12 @@ h2 em {
 .project-card p {
     max-width: 440px;
     margin-bottom: 1.4rem;
-    color: var(--granite-soft);
+    color: var(--color-dark);
     font-size: 0.88rem;
 }
 
 .project-featured p {
-    color: rgba(255, 254, 250, 0.74);
+    color: color-mix(in srgb, var(--color-light) 74%, transparent);
 }
 
 .card-link {
@@ -468,16 +465,17 @@ h2 em {
 
 .card-link span {
     margin-left: 0.4rem;
-    color: var(--alpenglow);
+    color: var(--color-accent2);
 }
 
 .project-featured .card-link span {
-    color: var(--gold);
+    color: var(--color-soft);
 }
 
 .leading {
     padding-top: clamp(5rem, 9vw, 8rem);
     padding-bottom: clamp(5rem, 9vw, 8rem);
+    background: var(--color-light);
 }
 
 .leading-copy {
@@ -488,13 +486,13 @@ h2 em {
 
 .leading-copy > p {
     margin-bottom: 1.5rem;
-    color: var(--granite-soft);
+    color: var(--color-dark);
 }
 
 .leading-facts {
     display: grid;
     margin-top: 1rem;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid color-mix(in srgb, var(--color-dark) 16%, transparent);
     grid-column: 1 / -1;
     grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -509,10 +507,11 @@ h2 em {
 
 .fact-item + .fact-item {
     padding-left: 1.25rem;
-    border-left: 1px solid var(--line);
+    border-left: 1px solid color-mix(in srgb, var(--color-dark) 16%, transparent);
 }
 
 .fact-item strong {
+    color: var(--color-gold);
     font-family: var(--serif);
     font-size: clamp(2rem, 3.5vw, 2.8rem);
     font-weight: 600;
@@ -522,14 +521,14 @@ h2 em {
 
 .fact-item span {
     max-width: 220px;
-    color: var(--granite-soft);
+    color: var(--color-dark);
     font-size: 0.76rem;
     line-height: 1.55;
 }
 
 .talks {
-    background: var(--granite);
-    color: var(--paper);
+    background: var(--color-dark);
+    color: var(--color-light);
 }
 
 .talks-wrap {
@@ -539,7 +538,12 @@ h2 em {
 
 .talks .section-kicker {
     margin-bottom: 1.8rem;
-    color: rgba(255, 254, 250, 0.66);
+    color: var(--color-soft);
+}
+
+.talks .section-kicker span,
+.contact .section-kicker span {
+    color: var(--color-soft);
 }
 
 .talks .section-heading {
@@ -548,29 +552,29 @@ h2 em {
 }
 
 .talks .section-heading > p {
-    color: rgba(255, 254, 250, 0.72);
+    color: var(--color-light);
 }
 
 .talks h2 em {
-    color: var(--gold);
+    color: var(--color-gold);
 }
 
 .talk-item {
     display: grid;
     padding: 1.45rem 0;
     align-items: start;
-    border-top: 1px solid rgba(255, 254, 250, 0.2);
+    border-top: 1px solid color-mix(in srgb, var(--color-soft) 28%, transparent);
     grid-template-columns: 160px minmax(0, 1fr) 24px;
     gap: 1.5rem;
 }
 
 .talk-item:last-child {
-    border-bottom: 1px solid rgba(255, 254, 250, 0.2);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-soft) 28%, transparent);
 }
 
 .talk-year {
     padding-top: 0.38rem;
-    color: var(--gold);
+    color: var(--color-soft);
     font-size: 0.62rem;
 }
 
@@ -582,7 +586,7 @@ h2 em {
 
 .talk-item h3 a {
     color: inherit;
-    text-decoration-color: var(--gold);
+    text-decoration-color: var(--color-gold);
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
 }
@@ -590,12 +594,12 @@ h2 em {
 .talk-item p {
     max-width: 650px;
     margin: 0;
-    color: rgba(255, 254, 250, 0.7);
+    color: var(--color-light);
     font-size: 0.84rem;
 }
 
 .talk-mark {
-    color: var(--alpenglow);
+    color: var(--color-soft);
 }
 
 .talks .button {
@@ -619,8 +623,8 @@ h2 em {
     flex-direction: column;
     justify-content: flex-end;
     overflow: hidden;
-    background-color: var(--glacier);
-    background-image: repeating-radial-gradient(ellipse at 52% 118%, transparent 0 17px, rgba(46, 58, 63, 0.17) 18px 19px, transparent 20px 34px);
+    background-color: var(--color-soft);
+    background-image: repeating-radial-gradient(ellipse at 52% 118%, transparent 0 17px, color-mix(in srgb, var(--color-dark) 17%, transparent) 18px 19px, transparent 20px 34px);
 }
 
 .mountain-art::before,
@@ -630,7 +634,7 @@ h2 em {
     bottom: 5%;
     left: -7%;
     height: 55%;
-    border: 1px solid rgba(46, 58, 63, 0.2);
+    border: 1px solid color-mix(in srgb, var(--color-dark) 20%, transparent);
     border-radius: 50% 50% 0 0;
     content: "";
     transform: rotate(-8deg);
@@ -641,7 +645,7 @@ h2 em {
     bottom: -2%;
     left: -16%;
     height: 52%;
-    border-color: rgba(46, 58, 63, 0.3);
+    border-color: color-mix(in srgb, var(--color-dark) 30%, transparent);
     transform: rotate(7deg);
 }
 
@@ -660,13 +664,13 @@ h2 em {
 }
 
 .mountain-number span {
-    color: var(--alpenglow);
+    color: var(--color-gold);
     font-size: 0.48em;
 }
 
 .mountain-caption {
     margin-top: 0.7rem;
-    color: var(--granite-soft);
+    color: var(--color-dark);
     font-size: 0.68rem;
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -678,14 +682,14 @@ h2 em {
 }
 
 .mountain-copy > p {
-    color: var(--granite-soft);
+    color: var(--color-dark);
 }
 
 .bio {
     display: grid;
     padding-top: 3rem;
     padding-bottom: clamp(5rem, 9vw, 8rem);
-    border-top: 1px solid var(--line);
+    border-top: 1px solid color-mix(in srgb, var(--color-dark) 16%, transparent);
     grid-template-columns: 0.7fr 1.3fr;
     gap: clamp(2rem, 8vw, 8rem);
 }
@@ -705,20 +709,20 @@ h2 em {
 
 .bio-note {
     margin-top: 1.5rem;
-    color: var(--granite-soft);
+    color: var(--color-dark);
     font-size: 0.72rem;
 }
 
 .bio-note span {
     padding: 0 0.4rem;
-    color: var(--alpenglow);
+    color: var(--color-accent2);
 }
 
 .contact {
     position: relative;
     overflow: hidden;
-    background: var(--granite);
-    color: var(--paper);
+    background: var(--color-dark);
+    color: var(--color-light);
 }
 
 .contact::after {
@@ -727,9 +731,9 @@ h2 em {
     right: -120px;
     width: 650px;
     height: 650px;
-    border: 1px solid rgba(207, 227, 232, 0.18);
+    border: 1px solid color-mix(in srgb, var(--color-soft) 18%, transparent);
     border-radius: 50%;
-    box-shadow: 0 0 0 32px rgba(207, 227, 232, 0.03), 0 0 0 64px rgba(207, 227, 232, 0.03), 0 0 0 96px rgba(207, 227, 232, 0.03), 0 0 0 128px rgba(207, 227, 232, 0.03);
+    box-shadow: 0 0 0 32px color-mix(in srgb, var(--color-soft) 3%, transparent), 0 0 0 64px color-mix(in srgb, var(--color-soft) 3%, transparent), 0 0 0 96px color-mix(in srgb, var(--color-soft) 3%, transparent), 0 0 0 128px color-mix(in srgb, var(--color-soft) 3%, transparent);
     content: "";
     pointer-events: none;
 }
@@ -745,7 +749,7 @@ h2 em {
 
 .contact .section-kicker {
     margin-bottom: 1.5rem;
-    color: rgba(255, 254, 250, 0.66);
+    color: var(--color-soft);
 }
 
 .contact h2 {
@@ -753,13 +757,13 @@ h2 em {
 }
 
 .contact h2 em {
-    color: var(--gold);
+    color: var(--color-gold);
 }
 
 .contact-wrap > p {
     max-width: 480px;
     margin-bottom: 1.7rem;
-    color: rgba(255, 254, 250, 0.74);
+    color: var(--color-light);
 }
 
 .site-footer {
@@ -767,7 +771,8 @@ h2 em {
     min-height: 115px;
     padding: 1.5rem max(1.5rem, calc((100vw - 1280px) / 2));
     align-items: center;
-    background: var(--snow);
+    background: var(--color-dark);
+    color: var(--color-light);
     grid-template-columns: 1fr 1fr 1.5fr auto;
     gap: 1.5rem;
 }
@@ -778,13 +783,13 @@ h2 em {
 
 .site-footer p {
     margin: 0;
-    color: var(--granite-soft);
+    color: var(--color-soft);
     font-size: 0.68rem;
 }
 
 .site-footer p span {
     padding: 0 0.2rem;
-    color: var(--alpenglow);
+    color: var(--color-soft);
 }
 
 .social-links {
@@ -796,15 +801,15 @@ h2 em {
 
 .social-links a,
 .site-footer small {
-    color: var(--granite-soft);
+    color: var(--color-light);
     font-size: 0.66rem;
     text-decoration: none;
 }
 
 .social-links a:hover {
-    color: var(--granite);
+    color: var(--color-soft);
     text-decoration: underline;
-    text-decoration-color: var(--gold);
+    text-decoration-color: var(--color-gold);
     text-underline-offset: 3px;
 }
 
@@ -834,7 +839,7 @@ h2 em {
     }
 
     .hero-shade {
-        background: linear-gradient(90deg, rgba(23, 34, 38, 0.83), rgba(23, 34, 38, 0.35)), linear-gradient(0deg, rgba(23, 34, 38, 0.46), transparent 70%);
+        background: linear-gradient(90deg, color-mix(in srgb, var(--color-dark) 83%, transparent), color-mix(in srgb, var(--color-dark) 35%, transparent)), linear-gradient(0deg, color-mix(in srgb, var(--color-dark) 46%, transparent), transparent 70%);
     }
 
     .hero-note {
@@ -872,11 +877,11 @@ h2 em {
     .fact-item:nth-child(3) {
         padding-left: 0;
         border-left: 0;
-        border-top: 1px solid var(--line);
+        border-top: 1px solid color-mix(in srgb, var(--color-dark) 16%, transparent);
     }
 
     .fact-item:nth-child(4) {
-        border-top: 1px solid var(--line);
+        border-top: 1px solid color-mix(in srgb, var(--color-dark) 16%, transparent);
     }
 
     .talk-item {
