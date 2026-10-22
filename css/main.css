@@ -2,7 +2,7 @@
    brand palette "the climb" · 2026-10-22
    navy #1e2c3a · cream #f3efe6 · ink #1c232b · glacier #2f8fb0 (data, links, headline accents)
    larch gold #d99a3d (the two summits: the 26 and the contact button) · soft #9CC5D4 · sunlit #5a5238
-   Contour lines climb from cool (numbers) to warm (contact). */
+   Contour lines climb from cool (hero) to warm (contact). */
 :root{
   --dark:#1e2c3a; --light:#f3efe6; --ink:#1c232b; --accent:#2f8fb0; --accent-strong:#27789a; --gold:#d99a3d; --accent2:#2F6F8F; --soft:#9CC5D4;
   --muted:#4e5861;
@@ -51,6 +51,10 @@ p{margin:0 0 1em}
   background:linear-gradient(90deg,color-mix(in srgb,var(--dark) 75%,transparent) 0%,color-mix(in srgb,var(--dark) 35%,transparent) 100%),
   url("/img/berna_bg.jpg") left 30%/cover no-repeat;
   mask-image:linear-gradient(90deg,transparent,#000 35%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 35%)}
+.hero-photo::after{content:"";position:absolute;inset:0;
+  mask-image:linear-gradient(90deg,#000,transparent 60%);-webkit-mask-image:linear-gradient(90deg,#000,transparent 60%);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600' fill='none' stroke-width='1.2'><path stroke='%233a4a5c' d='M0 520C120 440 220 470 320 380S520 220 640 200 800 160 800 120'/><path stroke='%233a4a5c' d='M0 470C110 400 210 420 310 330S510 180 630 160 800 110 800 70'/><path stroke='%233a4a5c' d='M0 420C100 360 200 370 300 280S500 140 620 120 800 60 800 20'/><path stroke='%232f8fb0' stroke-width='1.6' d='M0 370C90 320 190 320 290 230S490 100 610 80 800 10 800 -30'/><path stroke='%233a4a5c' d='M120 600C220 540 320 560 420 480S620 340 740 320 800 300 800 290'/><path stroke='%232f8fb0' stroke-width='1.6' d='M220 600C320 560 400 570 500 500S680 400 800 380'/></svg>");
+  background-size:cover}
 .hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,color-mix(in srgb,var(--dark) 85%,transparent) 100%)}
 .hero-content{position:relative;max-width:var(--wrap);margin:0 auto;width:100%;padding:160px 24px 110px}
 .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--accent-strong);margin:0 0 26px}
