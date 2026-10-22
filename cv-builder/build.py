@@ -121,10 +121,14 @@ def parse(path):
             section["body"][-1][1] = inline(val)
         elif kind == "p":
             if section["kind"] == "jobs": section["body"][-1][2] = inline(val)
-            else: section["kind"] = "p"; section["body"] = inline(val)
+            else:
+                section["kind"] = "blocks"
+                section["body"].append(("p", inline(val)))
         elif kind == "list":
             if section["kind"] == "jobs": section["body"][-1][3] = [inline(x) for x in val]
-            else: section["kind"] = "list"; section["body"] = [inline(x) for x in val]
+            else:
+                section["kind"] = "blocks"
+                section["body"].append(("list", [inline(x) for x in val]))
     cv["main"] = [(s["head"], s["kind"], s["body"]) for s in cv["main"]]
     return cv
 
@@ -205,10 +209,12 @@ def render(cv):
     main = []
     for head, kind, body in cv["main"]:
         main.append(f"<h2>{head}</h2>")
-        if kind == "p":
-            main.append(f"<p>{body}</p>")
-        elif kind == "list":
-            main.append("<ul>" + "".join(f"<li>{x}</li>" for x in body) + "</ul>")
+        if kind == "blocks":
+            for block_kind, block_body in body:
+                if block_kind == "p":
+                    main.append(f"<p>{block_body}</p>")
+                elif block_kind == "list":
+                    main.append("<ul>" + "".join(f"<li>{x}</li>" for x in block_body) + "</ul>")
         elif kind == "jobs":
             for org, meta, desc, bullets in body:
                 main.append('<div class="job">')
