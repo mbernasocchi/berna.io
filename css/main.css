@@ -2,7 +2,7 @@
    brand palette "the climb" · 2026-10-22
    navy #1e2c3a · cream #f3efe6 · ink #1c232b · glacier #2f8fb0 (data, links, headline accents)
    larch gold #d99a3d (the two summits: the 26 and the contact button) · soft #9CC5D4 · sunlit #5a5238
-   Contour lines climb from cool (hero) to warm (contact). */
+   Contour lines climb from cool (numbers) to warm (contact). */
 :root{
   --dark:#1e2c3a; --light:#f3efe6; --ink:#1c232b; --accent:#2f8fb0; --accent-strong:#27789a; --gold:#d99a3d; --accent2:#2F6F8F; --soft:#9CC5D4;
   --muted:#4e5861;
@@ -19,8 +19,8 @@ h2{font-size:clamp(2rem,4.2vw,3.4rem)}
 h2 em{font-style:normal;color:var(--accent)}
 h3{font-size:1.35rem;font-weight:600}
 p{margin:0 0 1em}
-.skip-link{position:absolute;left:-999px}
-.skip-link:focus{position:fixed;left:16px;top:16px;z-index:20;padding:10px 16px;background:var(--light);color:var(--ink)}
+.skip-link{position:fixed;top:12px;left:12px;z-index:20;padding:10px 16px;border-radius:999px;background:var(--gold);color:var(--ink);font-weight:600;transform:translateY(-200%);transition:transform .15s}
+.skip-link:focus,.skip-link:focus-visible{transform:none;outline:2px solid var(--light);outline-offset:2px}
 .section-wrap{max-width:var(--wrap);margin:0 auto;padding:96px 24px}
 .section-kicker{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--accent2);margin-bottom:22px}
 .section-kicker span{color:var(--accent-strong);margin-right:10px}
@@ -51,13 +51,10 @@ p{margin:0 0 1em}
   background:linear-gradient(90deg,color-mix(in srgb,var(--dark) 75%,transparent) 0%,color-mix(in srgb,var(--dark) 35%,transparent) 100%),
   url("/img/berna_bg.jpg") left 30%/cover no-repeat;
   mask-image:linear-gradient(90deg,transparent,#000 35%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 35%)}
-.hero-photo::after{content:"";position:absolute;inset:0;
-  mask-image:linear-gradient(90deg,#000,transparent 60%);-webkit-mask-image:linear-gradient(90deg,#000,transparent 60%);
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600' fill='none' stroke-width='1.2'><path stroke='%233a4a5c' d='M0 520C120 440 220 470 320 380S520 220 640 200 800 160 800 120'/><path stroke='%233a4a5c' d='M0 470C110 400 210 420 310 330S510 180 630 160 800 110 800 70'/><path stroke='%233a4a5c' d='M0 420C100 360 200 370 300 280S500 140 620 120 800 60 800 20'/><path stroke='%232f8fb0' stroke-width='1.6' d='M0 370C90 320 190 320 290 230S490 100 610 80 800 10 800 -30'/><path stroke='%233a4a5c' d='M120 600C220 540 320 560 420 480S620 340 740 320 800 300 800 290'/><path stroke='%232f8fb0' stroke-width='1.6' d='M220 600C320 560 400 570 500 500S680 400 800 380'/></svg>");
-  background-size:cover}
 .hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,color-mix(in srgb,var(--dark) 85%,transparent) 100%)}
 .hero-content{position:relative;max-width:var(--wrap);margin:0 auto;width:100%;padding:160px 24px 110px}
 .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--accent-strong);margin:0 0 26px}
+.eyebrow span{white-space:nowrap}
 .hero h1{font-size:clamp(3rem,7.6vw,6.6rem);font-weight:600;letter-spacing:-.025em;line-height:1;margin-bottom:28px}
 .hero h1 span{color:var(--accent)}
 .hero-intro{font-size:clamp(1.1rem,1.6vw,1.4rem);max-width:640px;color:color-mix(in srgb,var(--light) 88%,transparent);margin-bottom:34px}
@@ -142,7 +139,8 @@ p{margin:0 0 1em}
   .project-grid{grid-template-columns:1fr}.project-featured{grid-column:auto}
   .talk-item{grid-template-columns:1fr}.nav-links{display:none}
   .site-footer{grid-template-columns:1fr}.social-links{justify-content:flex-start}
-  .hero-photo::before{left:0;background-position:0 0,center 30%;mask-image:none;-webkit-mask-image:none}
+  .hero-photo::before{left:0;background-image:linear-gradient(90deg,color-mix(in srgb,var(--dark) 85%,transparent),color-mix(in srgb,var(--dark) 70%,transparent)),url("/img/berna_bg.jpg");background-position:0 0,center 45%;mask-image:none;-webkit-mask-image:none}
+  .eyebrow{letter-spacing:.14em}
 }
 
 /* the climb: contour lines on every dark panel, cool at the top, warm at the bottom */
