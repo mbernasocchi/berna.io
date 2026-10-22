@@ -20,6 +20,7 @@ h2 em{font-style:normal;color:var(--accent)}
 h3{font-size:1.35rem;font-weight:600}
 p{margin:0 0 1em}
 .skip-link{position:absolute;left:-999px}
+.skip-link:focus{position:fixed;left:16px;top:16px;z-index:20;padding:10px 16px;background:var(--light);color:var(--ink)}
 .section-wrap{max-width:var(--wrap);margin:0 auto;padding:96px 24px}
 .section-kicker{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--accent2);margin-bottom:22px}
 .section-kicker span{color:var(--accent-strong);margin-right:10px}
