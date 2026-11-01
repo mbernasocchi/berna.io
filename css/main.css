@@ -36,7 +36,8 @@ p{margin:0 0 1em}
 /* header */
 .site-header{position:fixed;inset:0 0 auto 0;z-index:10;backdrop-filter:blur(10px);background:color-mix(in srgb,var(--dark) 92%,transparent)}
 .nav-wrap{max-width:var(--wrap);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;color:var(--light)}
-.wordmark{font-family:var(--font-body);font-weight:700;font-size:1.35rem;color:var(--light)}
+.wordmark{font-family:var(--font-body);font-weight:700;font-size:1.35rem;color:var(--light);display:inline-flex;align-items:center}
+.wordmark .mark{height:.74em;width:auto;display:block}
 .wordmark span,.footer-wordmark span{color:var(--accent)}
 .nav-links{display:flex;gap:28px}
 .nav-links a{color:var(--light);font-weight:500;font-size:.95rem;opacity:.85}
@@ -162,3 +163,4 @@ a.talk-mark{color:var(--accent)}
 .intro p a,.leading-copy p a,.bio-copy p a{color:var(--accent-strong);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 45%,transparent)}
 .intro p a:hover,.leading-copy p a:hover,.bio-copy p a:hover{border-bottom-color:var(--accent-strong)}
 .hero-roles a.chip:hover{border-color:var(--soft);color:var(--light)}
+
