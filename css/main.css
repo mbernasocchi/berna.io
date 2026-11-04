@@ -183,3 +183,5 @@ a.talk-mark{color:var(--accent)}
 /* mountains: tile top-aligned with the text, a little smaller */
 .mountains{grid-template-columns:.9fr 1.2fr;align-items:start}
 .mountain-art{max-width:440px}
+
+.fact-item strong small{font-family:var(--font-body);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);position:relative;top:-.4em;margin-right:6px}
